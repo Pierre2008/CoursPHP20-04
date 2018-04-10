@@ -1,18 +1,10 @@
 <?php
-include "./classes/Voiture.php";
 include "./functions/debug.php";
-
-$voiture1 = new Voiture("Jaune");
-
-
-$voiture1 -> marque = "Datsun";
-$voiture1 -> masse = 900;
-$voiture1 -> puissance = 150000;
-
-echo $voiture1 -> demarrer();
+include "./classes/Voiture.php";
 
 
-debug($voiture1);
+$voiture1 = new Voiture("Jaune", 900, "Washwuntai", 150000);
 
+$voiture1 -> vitesse = 50;
 
-
+echo "L'Energie cinétique de la voiture est " . $voiture1 -> calculerEnergieCinetique();
